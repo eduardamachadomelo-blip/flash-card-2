@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AbelhaPass - Gerador de Senhas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bee-container"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="bee-icon">🐝</span>
+                <h1>AbelhaPass</h1>
+            </div>
+            <p>Gerador de Senhas Moderno e Seguro</p>
+        </header>
 
+        <main>
+            <div class="password-display">
+                <input type="text" id="password" readonly placeholder="Sua senha aparecerá aqui">
+                <button id="copy-btn" class="copy-button">📋 Copiar</button>
+            </div>
+
+            <div class="options">
+                <div class="option-group">
+                    <label for="length">Comprimento da Senha: <span id="length-value">16</span></label>
+                    <input type="range" id="length" min="4" max="32" value="16">
+                </div>
+
+                <div class="checkboxes">
+                    <label><input type="checkbox" id="uppercase" checked> Maiúsculas (A-Z)</label>
+                    <label><input type="checkbox" id="lowercase" checked> Minúsculas (a-z)</label>
+                    <label><input type="checkbox" id="numbers" checked> Números (0-9)</label>
+                    <label><input type="checkbox" id="symbols" checked> Símbolos (!@#$ etc)</label>
+                </div>
+            </div>
+
+            <button id="generate-btn" class="generate-button">Gerar Senha 🐝</button>
+
+            <div class="strength">
+                <div class="strength-bar" id="strength-bar"></div>
+                <span id="strength-text">Força da Senha</span>
+            </div>
+
+            <div class="tips">
+                <h3>Dicas de Segurança</h3>
+                <ul>
+                    <li>Use senhas únicas para cada conta</li>
+                    <li>Evite informações pessoais</li>
+                    <li>Atualize regularmente</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>Feito com ❤️ e mel para sua segurança • Tema Abelhas Voando</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
